@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Middagshjälpen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="nav-bar">
+      <a href="#" class="logo">Middagshjälpen</a>
+      <button class="hamburger-btn" id="menu-btn" aria-label="Meny">≡</button>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#recept">Recept</a></li>
+        <li><a href="#om-mig">Om mig</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SEkTION -->
+    <section class="hero">
+      <h1>Nya recept varje vecka!</h1>
+    </section>
+
+    <!-- SENASTE RECEPTEN -->
+    <section class="recent-recipes" id="recept">
+      <h2>Senaste Recepten</h2>
+      <div class="recipe-grid" id="recipe-grid">
+        <!-- JS Injicerar recept här -->
+      </div>
+    </section>
+
+    <!-- SÖK OVH FILTER -->
+    <section class="search-section">
+      <h2>Sök efter recept</h2>
+      
+      <div class="search-box">
+        <input type="text" id="recipe-search" placeholder="Till exempel Pasta">
+      </div>
+
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">Alla</button>
+        <button class="filter-btn" data-category="kott">Kött</button>
+        <button class="filter-btn" data-category="kyckling">Kyckling</button>
+      </div>
+    </section>
+
+    <!--(FAQ) -->
+    <section class="faq-section">
+      <h2>Vanliga Frågor</h2>
+      <div class="faq-container">
+        <details class="faq-item">
+          <summary>Hur länge håller maten i kylskåpet och kan den frysas?</summary>
+          <p>De flesta färdiglagade rätter håller i 3–4 dagar i en tättslutande matlåda i kylen. Om maten går att frysa står det oftast i receptet.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Kan jag byta ut ingrediens mot något annat?</summary>
+          <p>Ja, de flesta recept går att anpassa efter vad du har hemma eller dina kostpreferenser.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Hur räknar jag om receptet till fler eller färre portioner?</summary>
+          <p>Du kan enkelt multiplicera eller dela ingrediensmängderna baserat på hur många portioner du vill laga.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- RECEPT POPUP -->
+    <div id="recipe-modal" class="modal">
+      <div class="modal-content">
+        <button id="modal-close" class="modal-close-btn">&times;</button>
+        <h2 id="modal-title"></h2>
+        <p id="modal-desc"></p>
+        <h3>Gör så här:</h3>
+        <ol id="modal-instructions"></ol>
+      </div>
+    </div>
+
+ <!-- OM MIG MODAL -->
+    <div id="om-mig" class="modal">
+      <div class="modal-content">
+        <button id="about-modal-close" class="modal-close-btn">&times;</button>
+        <h2>Om Mig</h2>
+        <p class="about-text">
+          Hej! Det är jag som har skapat <strong>Middagshjälpen</strong>. Den här webbsidan är byggd för att göra vardagsmatlagningen roligare, enklare och mer inspirerande genom att kombinera smart JavaScript-logik med en modern design.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Kontakta oss idag! Tel. 123 4567 Email: Middagshjälpen@gmail.com</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
